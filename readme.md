@@ -20,7 +20,7 @@ After implementing the aforementioned steps and performing the corresponding alg
 
 $$i\hbar\frac{d}{dt} f_n^{(i)}=-t\sum_m \left[\sqrt{n} \sqrt{m} f_{n-1}^{(i)} \left(f_{m-1}^{*(i+1)} f_{m}^{(i+1)}+ f_{m-1}^{*(i-1)} f_{m}^{(i-1)}\right)\right.$$
 
-$$\left.+ \sqrt{n+1}\sqrt{m} f_{n+1}^{(i)}\left(f_{m}^{*(i+1)} f_{m}^{(i+1)} + f_{m}^{*(i-1)} f_{m-1}^{(i-1)}\right)\right]$$
+$$+ \sqrt{n+1}\sqrt{m} f_{n+1}^{(i)}\left(f_{m}^{*(i+1)} f_{m}^{(i+1)} + f_{m}^{*(i-1)} f_{m-1}^{(i-1)}\right)$$
 
 $$+ \frac{U}{2} f_n^{(i)}n(n-1)-\mu f_n^{(i)}n$$
     
