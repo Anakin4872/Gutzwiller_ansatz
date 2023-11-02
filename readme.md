@@ -14,13 +14,15 @@ $$\mathcal{L}= \frac{i\hbar}{2}\left(\braket{\Psi|\dot{\Psi}}-\braket{\dot{\Psi}
 
 The dynamical equations can be retrieved from the Euler-Lagrange formulation,
 
-$$\frac{d}{dt}\left(\frac{d\mathcal{L}}{d\dot{f}_{n_i}^{*i}} \right) = \frac{d\mathcal{L}}{df_{n_i}^{*i}}$$
+$$\frac{d}{dt}\left(\frac{d\mathcal{L}}{d\dot{f}_{n_i}^{*i}}\right)=\frac{d\mathcal{L}}{df_{n_i}^{*i}}$$
 
 After implementing the aforementioned steps and performing the corresponding algebraic procedures for the spinless Bose-Hubbard model with nearest neighbor interaction, the dynamics can be characterized by the following set of coupled differential equations,
 
-$$i\hbar\frac{d}{dt} f_n^{(i)}=&-t\sum_m \left[\sqrt{n} \sqrt{m} f_{n-1}^{(i)} \left(f_{m-1}^{*(i+1)} f_{m}^{(i+1)}+ f_{m-1}^{*(i-1)} f_{m}^{(i-1)}\right)\right.
-    & \left.+ \sqrt{n+1}\sqrt{m} f_{n+1}^{(i)}\left(f_{m}^{*(i+1)} f_{m}^{(i+1)} + f_{m}^{*(i-1)} f_{m-1}^{(i-1)}\right)\right]
-    & + \frac{U}{2} f_n^{(i)}n(n-1)-\mu f_n^{(i)}n$$
+$$i\hbar\frac{d}{dt} f_n^{(i)}=&-t\sum_m \left[\sqrt{n} \sqrt{m} f_{n-1}^{(i)} \left(f_{m-1}^{*(i+1)} f_{m}^{(i+1)}+ f_{m-1}^{*(i-1)} f_{m}^{(i-1)}\right)\right.$$
+
+$$& \left.+ \sqrt{n+1}\sqrt{m} f_{n+1}^{(i)}\left(f_{m}^{*(i+1)} f_{m}^{(i+1)} + f_{m}^{*(i-1)} f_{m-1}^{(i-1)}\right)\right]$$
+
+$$& + \frac{U}{2} f_n^{(i)}n(n-1)-\mu f_n^{(i)}n$$
     
  where the index $i$ runs over the $L$ lattice sites, $n$ and $m$ correspond to the internal degree of freedom (number of particles in this case), where $n,m={0, 1, 2}$ since the maximum allowed number of particles per site is two.
 
@@ -28,6 +30,8 @@ Later in this work, particles with spin-1 were considered, such that the index a
 
 $$\ket{\Psi}=\prod_i\sum_{m=-1}^{m=1} f_{m_i}^i \ket{m_i}$$
 
+
+## **Use of the code**
 
 
 
