@@ -31,9 +31,29 @@ Later in this work, particles with spin-1 were considered, such that the index a
 $$\ket{\Psi}=\prod_i\sum_{m=-1}^{m=1} f_{m_i}^i \ket{m_i}$$
 
 
-## **Use of the code**
+# **Use of the code**
+## **For spinless.cpp**
+This program numerically solves the spinless Bose–Hubbard model using the Gutzwiller mean-field ansatz. The implementation is written in C++ and relies on the Armadillo linear algebra library and OpenMP for parallel computation. The goal is to compute observables such as the average particle number and number fluctuations across a range of hopping amplitudes and chemical potentials.
+
+The code evolves the local Gutzwiller wavefunction coefficients $f_i(n)$ using imaginary-time evolution and the Runge–Kutta 4th-order (RK4) method. Each site is represented by a complex matrix of coefficients, and self-consistency is achieved through iterative normalization of the wavefunction at every site.
+
+### Key model parameters:
+- $\mu$: Chemical potential (scanned from MUmin to MUmax)
+- t: Hopping amplitude (scanned from Tmin to Tmax)
+- V: Density–density interaction between neighboring sites
+- n: Maximum occupation number per site
+- s: Number of lattice sites
+- h: RK4 time step
+- jmax: Maximum number of imaginary-time iterations
+
+The output consists of the average number of particles ⟨n⟩ and its standard deviation $Δn^2$ for each pair of parameters ($\mu$, t).
+
+**Notes**
+
+- The code uses periodic boundary conditions and includes nearest-neighbor density interactions through the function `ITEpV2`.
+- Parallelization (#pragma omp parallel for) speeds up the computation of different hopping amplitudes.
+- All parameters can be easily modified at the top of the `main()` function.
+- The physical constants are dimensionless for simplicity.
 
 
-
-
-
+## **For bilinearBH.cpp**
